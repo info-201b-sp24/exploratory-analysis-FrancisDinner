@@ -75,17 +75,14 @@ This dataset also is missing a key detail - What type of data is lost. For a con
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
 Throughout this analysis, we were surprised to see that the average data breach affects thousands of people. Our data includes 1103 data breaches. The largest among these data breaches was the Equifax data breach, where the data of 3243664 Washingtonians were breached. We have also found that the average number of Washingtonians affected by a data breach is 29756. These shockingly large numbers illustrate the impact breaches have.
 
-We were also how these data breaches occur. In this dataset, the breaches are categorized by the "cyber crime" that has led to the data breach. There are 7 types of cyber crime used, which include "Cyberattack", "Unauthorized Access", and "Theft or Mistake". Our analysis reveals that the most common (and successful) cyber crime in Washington is "Ransomware". This is also intriguing, because the premise of randomware necessitates installation of malware onto the victim's device or servers. 
+We were also how these data breaches occur. In this dataset, the breaches are categorized by the "cyber crime" that has led to the data breach. There are 7 types of cyber crime used, which include "Cyberattack", "Unauthorized Access", and "Theft or Mistake". Our analysis reveals that the most common (and successful) cyber crime in Washington is "Ransomware". This is also intriguing, because the premise of randomware means that the cyber criminal must have attempted to extort money from the victim.
 
 ### Table
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, code=readLines("table.R")}
-
 ```
 
 This table counts the total number of breaches and people affected for each industry. There are some interesting observations: The government category, despite having the least number of breaches, affects the most Washingtonians on average. This average is also substantially higher than all other industries, which all have less than half of Government's average. As expected, businesses suffer the most data breaches, although these breaches affect the least number of Washingtonians relative to other industries.
@@ -110,5 +107,7 @@ Data breaches don't just happen by themselves - Cyber criminals, a careless inte
 ### Chart 3
 
 As seen in the table, private businesses suffer the most data breaches. In this graph, we explore what type of businesses suffer data breaches. Retail businesses, from 2016 to 2024, have suffered 104 data breaches - significantly more in terms of number of breaches than any other type of businesses. This is concerning, considering that retail businesses can possibly lose addresses (for shipping purposes) and credit card information in these data breaches. 
+
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, code=readLines("chart3.R")}
 ```
