@@ -1,84 +1,114 @@
 ---
-title: "Exploratory Analysis"
+title: "Exploratory analysis"
+date: "May 14, 2024"
 output: html_document
 ---
 
-## Project title
-
-Give your project a concise, interesting title that summarizes the entirety of your project
+## Washington's Data Breaches
 
 ### Authors
 
-Names of your team members
+Francis Dinh
+fdinh@uw.edu
 
 ### Date
 
-Winter 2022
+Winter 2024
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+We are concerned with data breaches affecting people, especially Washingtonians. This is important because these data breaches often contain personal information that can be used for cybercrimes such as identity theft and fraud. We want to find and examine patterns to both highlight the most dangerous forms of data breaches and to effectively focus prevention efforts to the most prevalent data breaches.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+Cybersecurity; Data Breach; Washington; Cybercrime; Privacy
 
-### Introduction  
+### Introduction
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+Credit card information, addresses, purchase histories. Information like these are leaked by thousands of cyberattacks each year, compromising the privacy of millions of people. [Data leaks are only on the rise](https://hbr.org/2024/02/why-data-breaches-spiked-in-2023) as more data is stored onto the cloud, giving hackers access to more valuable targets. For this project, we are examining data about cybercrimes in Washington. We hope to answer the following questions:
 
-### Related Work  
+-   What industries are most affected by cybercrime? Exploring which industries are targeted by attacks can also illustrate what type of personal data is leaked.
+-   How have the types of cyberattack changed from 2016 to 2024? How do criminals gain access to personal information?
+-   How quickly do companies discover and recover from cyberattacks? It's often just the data breach that's reported in the news, but it's perhaps just as important that the affected company takes steps to compensate consumers and take preventative measures.
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+By answering these questions, we hope to understand what type of personal information cybercriminals are collecting, how cybercriminals are collecting personal data, and if companies are responding adequately to these threats. The trends and patterns from our project could help inform policy-making and cybersecurity experts to prevent more data breaches.
+
+### Related Work
+
+Especially as the world is becoming more technologically integrated, data breaches are both becoming more prevalent and more crippling. There is immense value in data, such as unlocking access to authorized accounts or gathering information, so data breaches often pose a grave security risk.
+
+[The United Nations's International Monetary Fund](https://www.imf.org/external/pubs/ft/fandd/2021/03/global-cyber-threat-to-financial-systems-maurer.htm) has expressed concern about the threat criminals posed to financial systems around the world. Data breaches are a significant factor in financial crimes, both in opening individuals to identity theft and compromising access to banking systems.
+
+Data breaches often find themselves in the news, such as [the BBC's reporting on a AT&T breach](https://www.bbc.com/news/world-us-canada-68701958). Highlighted in this article is how personal information such as social security numbers, addresses, and passcodes were stolen from AT&T. It's interesting to note that AT&T officially stated that they do not have evidence that they are breached or knowledge where the data had originated from, highlighting the challenges in detecting such breaches.
+
+There have been other research papers addressing similar questions to our project, such as ["Digging Deeper into Data Breaches: An Exploratory Data Analysis of Hacking Breaches Over Time"](https://www.sciencedirect.com/science/article/pii/S1877050919306064). This paper analyzes thousands of data breaches from 2005-2019 and does a very detailed analysis of the human factors in these breaches. Our goals with this project are very similar to those of this paper.
+
+Our project seeks to further examine patterns in data breaches, specifically to Washington state. Our project will only examine the types of cybercrimes and businesses affected by these crimes.
+
+
+#### Citations
+1. Hammouchi, Hicham, et al. “Digging Deeper into Data Breaches: An Exploratory Data Analysis of Hacking Breaches over Time.” Procedia Computer Science, Elsevier, 21 May 2019, www.sciencedirect.com/science/article/pii/S1877050919306064#section-cited-by. 
+2. Mauerer, Tim, and Arthur Nelson. “The Global Cyber Threat to Financial Systems – IMF F&D.” IMF, 2021, www.imf.org/external/pubs/ft/fandd/2021/03/global-cyber-threat-to-financial-systems-maurer.htm. 
+3. Seddon, Sean. “AT&T Data Breach: Millions of Customers Caught up in Major Dark Web Leak.” BBC News, BBC, 30 Mar. 2024, www.bbc.com/news/world-us-canada-68701958. 
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+The [data for this project](https://data.wa.gov/Consumer-Protection/Data-Breach-Notifications-Affecting-Washington-Res/sb4j-ca4h/about_data) is from the Washington State Open Data Portal. In Washington, all entities are required by law to disclose data breaches affecting over 500 Washington residents. These data breaches are then collected by the Attorney General's Office and used for consumer protection purposes.
+
+This dataset contains 1103 rows and 25 columns.
+
+There's a few issues to note about this data. This dataset does not contain any data breaches affecting less than 500 people in Washington, which means that small-scale breaches are not accounted for. These are also only data breaches that affect Washingtonians; this data is specific for either Washington state or national companies. This limited scope means conclusions must also be nuanced.
+
+With ethical questions, it's important to consider who is suspectible to cybercrimes as well as what cybercriminals steal. The most secure (and thus complex) techniques require much more resources, which essentially limits their usage to only wealthy and informed business and individuals. This means that quite often, the most vulnerable to cybercrime are those who are least able to afford to secure their information.
 
 ### Implications
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+Within this data, the answers to our research question can potentially identify the scale of data breaches and key weaknesses to address data breaches. By identifying the scale of data breaches, policymakers can see how many people have lost their information and create policies to help remedy the consequences people face. Industries, especially those our project may find to be most popular among hackers, can take preventative measures to protect both their information and those of their consumers. Policymakers can also force these preventative measures through laws that mandate a minimum level of cybersecurity. Our project may also simply increase awareness surrounding data breaches, as it is often just larger breaches that make the news.
+
+Overall, we hope our analysis will inform government, industry, and individuals in securing personal information. Personal information, in the wrong hand, has the potential to be used for harm. We hope that this project will contribute to creating a more accepting and secure world.
 
 ### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+
+When working with cybercrimes, it is especially difficult to get a clear picture. Companies and individuals often do not want to report that they have been compromised, as disclosing data breaches would only tarnish their reputation and bring public scrutiny. Additionally, not all cybercrimes are detected by the victim; It is very possible that some victims do not notice and thus cannot report the crime. This, compounded by the fact that this dataset is specific to Washington state, means that the sample size is disproportionally small. Any conclusions would likely only apply to Washington, and not fully illustrate the full scale of data breaches elsewhere.
+
+This dataset also is missing a key detail - What type of data is lost. For a consumer, having a birthday revealed is much less significant than having a social security number stolen. With this data set, this detail is not distinguished. Thus, we cannot make any insights into the specific types of data stolen, besides looking at the industry of the breached victim and inferring the type of data likely stolen.
 
 ### Summary Information
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
+Throughout this analysis, we were surprised to see that the average data breach affects thousands of people. Our data includes 1103 data breaches. The largest among these data breaches was the Equifax data breach, where the data of 3243664 Washingtonians were breached. We have also found that the average number of Washingtonians affected by a data breach is 29756. These shockingly large numbers illustrate the impact breaches have.
+
+We were also how these data breaches occur. In this dataset, the breaches are categorized by the "cyber crime" that has led to the data breach. There are 7 types of cyber crime used, which include "Cyberattack", "Unauthorized Access", and "Theft or Mistake". Our analysis reveals that the most common (and successful) cyber crime in Washington is "Ransomware". This is also intriguing, because the premise of randomware necessitates installation of malware onto the victim's device or servers. 
+
 ### Table
 
-Include a table of aggregate information
 
-Describe why you included the table and what information it reveals
+```{r echo=FALSE, message=FALSE, warning=FALSE, code=readLines("table.R")}
+
+```
+
+This table counts the total number of breaches and people affected for each industry. There are some interesting observations: The government category, despite having the least number of breaches, affects the most Washingtonians on average. This average is also substantially higher than all other industries, which all have less than half of Government's average. As expected, businesses suffer the most data breaches, although these breaches affect the least number of Washingtonians relative to other industries.
+
+The bigger picture is much more disappointing, however. The average data breach affects tens of thousands of Washingtonians (and typically even more beyond Washington!). Businesses seem to be specially susceptible to data breaches, and we are curious which *specific* businesses are losing their data. 
+
 
 ### Chart 1
 
-Include a chart
+This chart plots the number of data breaches from the years 2016 to 2024. This graph clearly shows that data breaches are becoming more prominent and common. Despite the data for 2024 being incomplete, it's interesting to note that it is already equal to the total reported data breaches in 2023. It also seems that data breaches have skyrocketed in 2021, and stayed consistently higher relative to 2016 - 2019 data breach counts. 
 
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r echo=FALSE, message=FALSE, warning=FALSE, code=readLines("chart1.R")}
 ```
 
 ### Chart 2
 
-Include a chart
+Data breaches don't just happen by themselves - Cyber criminals, a careless intern, or an accidental release are some of the many ways that private information can find itself in the public. This graph examines the 800 data breaches caused by cyber crime. The pie chart represents the proportion of each cyber crime involved in data breaches. Ransomware is clearly the most predominant category in this case, representing 43.38% of data breaches caused by cybercriminals, followed by malware at 23.88% and phishing at 9.375%. 
 
-Describe why you chose this chart and what information it reveals
+```{r echo=FALSE, message=FALSE, warning=FALSE, code=readLines("chart2.R")}
+```
 
 ### Chart 3
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
+As seen in the table, private businesses suffer the most data breaches. In this graph, we explore what type of businesses suffer data breaches. Retail businesses, from 2016 to 2024, have suffered 104 data breaches - significantly more in terms of number of breaches than any other type of businesses. This is concerning, considering that retail businesses can possibly lose addresses (for shipping purposes) and credit card information in these data breaches. 
+```{r echo=FALSE, message=FALSE, warning=FALSE, code=readLines("chart3.R")}
+```
